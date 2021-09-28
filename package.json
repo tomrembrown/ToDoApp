@@ -1,0 +1,10 @@
+{
+  "name": "ToDoApp",
+  "version": "0.0.1",
+  "main": "index.js",
+  "author": "Tom Brown <tombrown654321@protonmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "lerna": "^4.0.0"
+  }
+}
