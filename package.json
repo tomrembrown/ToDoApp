@@ -1,10 +1,23 @@
 {
-  "name": "ToDoApp",
+  "name": "todoapp",
   "version": "0.0.1",
-  "main": "index.js",
+  "description": "A simple Vue To-Do App - just to try some things out",
+  "repository": "https://github.com/tomrembrown/ToDoApp.git",
   "author": "Tom Brown <tombrown654321@protonmail.com>",
   "license": "MIT",
+  "private": true,
   "devDependencies": {
     "lerna": "^4.0.0"
+  },
+  "scripts": {
+    "createTables": "cd database && yarn run createTables",
+    "dev": "concurrently --kill-others \"cd server && yarn run dev\" \"cd client && yarn run serve\"",
+    "initial": "yarn install && cd client && yarn install && cp .env_start .env && cd .. && cd database && yarn install && cp .env.production .env && cd .. && cd server && yarn install && cp .env.production .env",
+    "build": "cd client && yarn run build",
+    "pbc": "git pull && yarn install && cd client && yarn install && yarn run build && cp .htaccess ./dist",
+    "server": "cd server && yarn run server"
+  },
+  "dependencies": {
+    "concurrently": "^6.2.2"
   }
 }

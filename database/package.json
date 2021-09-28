@@ -1,0 +1,15 @@
+{
+  "name": "database",
+  "version": "0.0.1",
+  "description": "The database for the todo app - just scripts to create the database",
+  "main": "createDatabase.js",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "dotenv": "^10.0.0",
+    "pg": "^8.7.1"
+  },
+  "scripts": {
+    "createTables": "node ./createTables.js"
+  }
+}
